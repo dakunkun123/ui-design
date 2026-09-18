@@ -1,0 +1,6 @@
+.voyage-actor .living-figure{width:100%;height:100%;object-fit:contain;object-position:center bottom;user-select:none;filter:grayscale(.25) contrast(1.03)}
+.voyage-0 .voyage-actor .living-figure{width:auto;height:100%;max-width:none;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 96%,transparent),linear-gradient(#000 66%,transparent 98%);mask-composite:intersect}
+.voyage-1 .voyage-actor .living-figure{animation:boat-buoyancy 6.8s ease-in-out infinite;transform-origin:50% 88%}
+.voyage[data-motion="off"] .living-figure{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.living-figure{animation:none!important}}
+.portal-space .living-figure{position:absolute;pointer-events:none;object-fit:contain}

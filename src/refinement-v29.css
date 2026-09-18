@@ -1,0 +1,11 @@
+.scene-life{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2}
+.living-figure[data-figure-rig]{background-image:none!important}
+.willow-growth{z-index:3;pointer-events:none}
+.voyage-stage{touch-action:none}
+.leaf-curtain button{color:#f1eee2;background:#182b27bb;border:1px solid #ddd2ac66;min-height:44px;backdrop-filter:blur(8px)}
+.story-atlas .portal-2 .portal-setting{opacity:.35}
+.voyage-2 .voyage-setting{opacity:.3}
+.voyage-2 .voyage-detail.living-plant{animation:none;transform:none}
+.scene-verse{color:#233426}
+.voyage-stage:after{opacity:.78}
+@media(prefers-reduced-motion:reduce){.scene-life,.willow-growth{transition:none}}

@@ -1,0 +1,85 @@
+/* V13: continuous paper space, editorial UI outside the object's silhouette. */
+.footer{display:none}
+.masthead{background:#f4f1e9f5}
+.hero#prologue{height:max(880px,100svh);min-height:100svh}
+.hero#prologue>.gpu-scene{inset:0;height:100%;mask-image:none}
+.hero .hero-copy{top:18%;width:43%;left:5.5%}
+.hero .hero-kicker{display:none}
+.hero .hero-actions{margin-top:26px}
+.hero .controls-hero{bottom:25px;background:none;padding:0;left:5.5%}
+.hero .controls-hero .scene-hint{font-size:12px}
+.hero .controls-hero .wind-options,.hero .controls-hero .control-seal{display:none}
+main>.sword-section[data-active="true"]{padding:0;min-height:100svh}
+.sword-section{height:max(880px,100svh);position:relative;overflow:hidden}
+.sword-section>.section-heading{position:absolute;left:5%;top:115px;width:32%;padding:0;z-index:7;pointer-events:none;margin:0}
+.sword-section>.section-heading .eyebrow{display:none}
+.cangfeng-title{width:100%;max-width:470px;display:block}
+.sword-intro-name{font-size:36px;margin:0 0 16px 22px;color:#202321}
+.sword-intro-line{font-size:17px;margin-left:22px;letter-spacing:2px}
+.sword-layout.page-width{position:absolute;inset:0;width:100%;max-width:none;margin:0;padding:0;min-height:0;display:block}
+.sword-section .sword-art{position:absolute;inset:0;width:100%;height:100%;margin:0;padding:0}
+.sword-art .gpu-scene{height:100%;inset:0;mask-image:none}
+.sword-art figcaption{display:none}
+.sword-section .sword-info{right:5%;top:auto;bottom:105px;width:310px;min-width:0;background:none;border:0;box-shadow:none;padding:0;z-index:8}
+.sword-info>.eyebrow,.sword-info>.sword-name,.sword-info>.sword-line{display:none}
+.sword-info .sword-tabs{margin-top:0}
+.sword-info .sword-panel{min-height:0;padding-bottom:10px}
+.sword-info .body-copy{font-size:14px;line-height:1.9}
+.sword-info .ink-transition{background:#f4f1e9eb;padding:12px 16px;margin:0 -16px}
+.sword-info .sword-tabs{background:#f4f1e9eb}
+.sword-hotspot{position:absolute;z-index:6;transform:translate(-50%,-130%);padding:12px 16px;color:#a6332e;border:0;border-bottom:1px solid currentColor;background:#f4f1e9e8;min-height:44px;font:inherit;letter-spacing:3px;cursor:pointer}
+.sword-hotspot[hidden]{display:none}
+.sword-hotspot:focus-visible{outline:2px solid #a6332e;outline-offset:4px}
+.controls-sword{background:#f4f1e9e8}
+.sword-info .sword-notes,.sword-info .panel-eyebrow{display:none}
+.sword-section .controls-sword{position:absolute;left:5%;bottom:78px;width:auto;max-width:400px;z-index:8;border:0;padding:0}
+.controls-sword .inspect-angle{max-width:300px}
+.controls-sword .inspect-caption{font-size:13px;margin:8px 0}
+.controls-sword .scene-hint{max-width:330px}
+.sword-closing.page-width{position:absolute;bottom:28px;left:5%;width:55%;margin:0;justify-content:flex-start;gap:30px;z-index:8;font-size:13px}
+.sword-closing a{color:#202321;text-decoration:none;border-bottom:1px solid #79796e;padding:8px 0}
+.featured-copy{background:none;border:0;box-shadow:none}
+.journal-scene-wrap .gpu-scene{mask-image:linear-gradient(90deg,transparent,#000 4%,#000 94%,transparent),linear-gradient(0deg,transparent,#000 8%,#000 94%,transparent);mask-composite:intersect}
+.featured-copy{background:#f4f1e9e0}
+.featured-story{overflow:hidden}
+.scene-controls button,.sword-tabs button{min-height:44px}
+@media(max-width:1100px) and (min-width:761px){.sword-section .sword-info{width:270px;right:4%;bottom:85px}.sword-info .body-copy{font-size:13px}.sword-section>.section-heading{top:135px;width:34%}}
+@media(max-width:760px){
+ .masthead{background:#f4f1e9}
+ .hero#prologue{height:1000px;min-height:100svh}
+ .hero .hero-copy{top:95px;width:88%;left:6%}
+ .hero#prologue>.gpu-scene{top:350px;bottom:0;height:650px;mask-image:none}
+ .hero .controls-hero{bottom:24px;left:6%}
+ .sword-section{height:auto;min-height:1150px!important;overflow:hidden}
+ .sword-section>.section-heading{top:90px;left:6%;width:65%}
+ .cangfeng-title{max-width:290px}
+ .sword-intro-name{font-size:27px;margin-left:12px;margin-bottom:10px}
+ .sword-intro-line{font-size:14px;margin-left:12px}
+ .sword-layout.page-width{position:relative;inset:auto;padding-top:630px}
+ .sword-section .sword-art{top:320px;height:340px;bottom:auto}
+ .sword-section .controls-sword{position:relative;inset:auto;margin:0 6%;width:88%;padding:10px 0}
+ .sword-section .sword-info{position:relative;inset:auto;width:88%;margin:16px 6% 85px;padding:0}
+ .sword-info .body-copy{font-size:15px}
+ .sword-closing.page-width{bottom:16px;width:88%;font-size:12px;gap:18px}
+ .featured-copy{background:#f4f1e9e8;border:0;box-shadow:none}
+ .motion-control{max-width:120px}
+}
+.spatial-scene .new-sword{object-fit:contain;filter:none}
+.spatial-scene .tassel-v14{width:15%;aspect-ratio:2/3;left:50%;top:2.8%;transform-origin:48% 0;mix-blend-mode:normal}
+.spatial-scene .tassel-v14 .tassel-texture{visibility:visible;inset:0;width:100%;height:100%;object-fit:contain;mix-blend-mode:normal}
+.spatial-scene .tassel-v14 .tassel-canvas{display:none}
+/* The fallback is a static composition: flatten old 3D stacking contexts so
+   multiply blends fine white-ground silk into the landscape, not an empty layer. */
+.gpu-scene>.spatial-scene{position:absolute;inset:0;height:100%}
+.gpu-scene .scene-assets,.gpu-scene .scene-camera{transform-style:flat}
+.gpu-scene .scene-camera>.landscape-depth{transform:none}
+.gpu-scene .scene-camera>.subject-depth{transform:none;mix-blend-mode:multiply;filter:none}
+.gpu-scene .scene-sword .landscape-depth{inset:0;border:0}
+.gpu-scene .scene-sword .sword-rig{height:125%;width:66%;left:18%;top:-4%;transform:rotate(60deg)}
+.gpu-scene .scene-sword .tassel-rig{transform:translateX(-50%) rotate(-60deg)}
+@media(min-width:761px){
+ .sword-section[data-inspect]:not([data-inspect="whole"])>.section-heading{visibility:hidden}
+}
+@media(max-width:760px){
+ .gpu-scene .scene-sword .sword-rig{height:130%;width:70%;left:15%;top:-16%;transform:rotate(60deg)}
+}

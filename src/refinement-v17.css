@@ -1,0 +1,41 @@
+/* Keep the glyph silhouette fixed; only pigment density travels inside it. */
+.brand-name{text-shadow:none;background:radial-gradient(ellipse at 15% 45%,#778070 0%,#28362d 13%,#171f1a 27%,#434a3d 37%,#1a221d 54%,#6c7363 66%,#19221c 78%);background-size:250% 210%;background-clip:text;-webkit-background-clip:text;color:transparent;animation:brand-ink-flow 12s ease-in-out infinite alternate}
+@keyframes brand-ink-flow{from{background-position:0% 20%}to{background-position:100% 80%}}
+.ink-interaction{position:fixed;inset:0;width:100%;height:100%;z-index:27;pointer-events:none}
+.ink-practice-open{position:fixed;z-index:24;right:160px;bottom:18px;min-width:44px;min-height:44px;border:0;border-bottom:1px solid #8b8d7b;background:#f4f1e9de;color:#373e32;font:inherit;cursor:pointer}
+.entry-ink-content{width:min(600px,100%);margin:auto;text-align:center;color:#303a31}
+.entry-ink-content h2{font-size:30px;letter-spacing:.24em;font-weight:400;margin:16px 0 0}
+.entry-ink-content .entry-seal{display:inline-block;font-size:18px;padding:8px 5px;border:1px solid #a54234;color:#a54234;writing-mode:vertical-rl;transform:rotate(-4deg)}
+.entry-ink-field{display:block;width:100%;height:clamp(160px,30vh,280px);touch-action:none;cursor:grab;margin:0 auto}
+.entry-ink-field:active{cursor:grabbing}.entry-ink-field:focus-visible{outline:1px dashed #9d5746;outline-offset:0}
+.entry-ink-content .entry-ink-status{font-size:14px;letter-spacing:.08em;line-height:1.8;min-height:50px;margin:0}
+.entry-ink-content .entry-privacy{font-size:12px;color:#697064;line-height:1.8;letter-spacing:.04em;margin:16px 0 0}
+.entry-ink-content .entry-progress{font-size:13px;margin:8px 0}
+.entry-ink-actions{display:flex;justify-content:center;gap:24px;flex-wrap:wrap}
+.entry-ink-actions button{font:inherit;font-size:15px;color:#343e32;background:transparent;border:0;border-bottom:1px solid #959784;padding:8px 10px;min-height:44px;cursor:pointer}
+.entry-ink-actions button:disabled{opacity:.5;cursor:not-allowed}
+.ink-practice{width:min(700px,94vw);max-height:90svh;overflow:auto;border:0;padding:36px;background:#f4f1e9;color:#303a31;box-shadow:0 20px 100px #17221844}
+.ink-practice::backdrop{background:#1f2d2680;backdrop-filter:blur(6px)}
+.ink-practice button:focus-visible,.ink-practice-open:focus-visible{outline:2px solid #a54234;outline-offset:4px}
+.sword-section .controls-sword{max-width:410px;width:34vw;bottom:80px;padding:18px 0 6px;background:none;isolation:isolate}
+.controls-sword::before{content:'';position:absolute;inset:-22px -36px;z-index:-1;background:radial-gradient(ellipse,#f4f1e9f5 24%,#f4f1e9b3 53%,transparent 73%);pointer-events:none}
+.inspect-heading{display:flex;align-items:center;gap:13px;font-size:12px;letter-spacing:.12em;color:#666f5f;margin-bottom:12px}
+.inspect-heading .inspect-stamp{writing-mode:vertical-rl;color:#984a3d;border:1px solid #984a3d;padding:5px 3px;transform:rotate(-3deg);font-size:12px}
+.inspect-heading button{margin-left:auto;font-size:12px;min-height:44px}
+.controls-sword .inspect-options{display:flex;gap:9px;flex-wrap:nowrap;justify-content:space-between}
+.controls-sword .inspect-options button{font-family:inherit;font-size:23px;min-width:58px;min-height:52px;padding:8px 10px;isolation:isolate;transition:color .25s}
+.controls-sword .inspect-options button::before{content:'';position:absolute;inset:0 -2px;background:url('/assets/ink-frame-v16.webp') center/100% 100% no-repeat;opacity:calc(.3 + var(--ink-condense,1)*.45);z-index:-1}
+.controls-sword .inspect-options button[aria-pressed=true]{color:#8e352a}
+.controls-sword .inspect-options button[aria-pressed=true]::after{width:4px;height:4px;left:calc(50% - 2px);right:auto;bottom:4px;background:#9f382c;transform:rotate(45deg);clip-path:none}
+.controls-sword .inspect-caption{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:12px 0 0;font-size:13px;letter-spacing:.04em;min-height:44px}
+.controls-sword .silk-action{flex-shrink:0;color:#883e31;margin:0;padding:4px 6px}
+.controls-sword .scene-hint{margin-top:5px;font-size:12px;color:#606a58;letter-spacing:.04em}
+.controls-sword .inspect-angle{max-width:none;padding:8px 0;border-top:1px solid #9b9f8840;margin-top:8px;font-size:13px}
+.controls-sword .inspect-angle[hidden]{display:none}
+.inspect-angle input{appearance:none;background:transparent;min-height:44px}
+.inspect-angle input::-webkit-slider-runnable-track{height:2px;background:#828675}
+.inspect-angle input::-webkit-slider-thumb{appearance:none;width:13px;height:13px;background:#914739;transform:rotate(45deg);margin-top:-5.5px;border:2px solid #f4f1e9;box-shadow:0 0 0 1px #914739}
+.inspect-angle input::-moz-range-track{height:2px;background:#828675}.inspect-angle input::-moz-range-thumb{width:11px;height:11px;background:#914739;border:2px solid #f4f1e9;border-radius:0}
+html[data-motion=off] .brand-name{animation:none;background:none;color:#202b23}
+@media(max-width:760px){.sword-section .controls-sword{width:88%;max-width:none;bottom:auto;padding:10px 0}.inspect-heading{margin-bottom:5px}.controls-sword .inspect-options button{font-size:21px;min-width:52px}.controls-sword .inspect-caption{font-size:12px}.ink-practice{padding:24px 16px}.entry-ink-content h2{font-size:26px}.ink-practice-open{right:140px;bottom:12px}.entry-gate{padding:16px}.entry-ink-actions{gap:12px}.entry-ink-content .entry-privacy{font-size:11px}.entry-ink-content .entry-ink-status{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.brand-name{animation:none;background:none;color:#202b23}.controls-sword *{transition:none!important}}

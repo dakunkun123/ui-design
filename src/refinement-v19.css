@@ -1,0 +1,39 @@
+.controls-sword [hidden]{display:none!important}
+.skip-link:not(:focus){clip-path:inset(50%);width:1px;height:1px;padding:0;overflow:hidden}
+.sword-section .controls-sword{width:330px;max-width:38vw;bottom:80px}
+.inspect-invite{display:flex;flex-direction:column;align-items:flex-start;gap:9px;position:relative;padding:18px 28px!important;min-height:76px;font-size:24px!important;color:#30382e;isolation:isolate}
+.inspect-invite::before{content:'';position:absolute;inset:0;z-index:-1;background:url('/assets/ink-frame-v16.webp') center/100% 100%;clip-path:inset(0 calc((1 - var(--ink-condense,1))*100%) 0 0)}
+.inspect-invite>span{clip-path:inset(0 calc((1 - var(--ink-condense,1))*100%) 0 0)}
+.inspect-invite::before,.inspect-invite>span{--wet-edge:calc(var(--ink-condense,1)*124% - 12%);clip-path:polygon(0 0,var(--wet-edge) 0,calc(var(--wet-edge) + 5%) 12%,calc(var(--wet-edge) - 3%) 26%,calc(var(--wet-edge) + 8%) 39%,calc(var(--wet-edge) + 1%) 54%,calc(var(--wet-edge) - 5%) 67%,calc(var(--wet-edge) + 6%) 81%,var(--wet-edge) 100%,0 100%)}
+.inspect-invite small{font-size:12px;line-height:1.6;opacity:var(--ink-condense,1);letter-spacing:1px}
+#contextual-sword-tools{margin-top:18px;padding:14px 0;background:radial-gradient(ellipse,#f4f1e9f5 20%,#f4f1e9db 60%,transparent 78%)}
+.inspect-zoom{display:flex;align-items:center;gap:18px;font-size:13px}.inspect-zoom button{min-height:44px}.inspect-zoom button:disabled{opacity:.4}
+.sword-section[data-interacting=true] .inspect-invite{min-height:44px;padding:8px 18px!important;font-size:20px!important}
+.sword-section[data-interacting=true] .inspect-invite small{display:none}
+#contextual-sword-tools{margin-top:4px;padding:0}
+#contextual-sword-tools .inspect-heading{margin-bottom:0;min-height:44px}
+#contextual-sword-tools .inspect-stamp{display:none}
+#contextual-sword-tools .inspect-options button{font-size:19px;min-height:44px;padding:5px 8px;border-bottom:1px solid #a8a08c}
+#contextual-sword-tools .inspect-options button::before{display:none}
+#contextual-sword-tools .inspect-caption{margin-top:0;font-size:12px}
+#contextual-sword-tools .scene-hint{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.sword-section .sword-hotspot{background:none;border:0;padding:10px;color:#903a2d;opacity:0;transition:opacity .25s;transform:translate(-50%,-180%);text-shadow:0 1px 5px #f4f1e9,0 -1px 5px #f4f1e9}
+.sword-hotspot::after{content:'';display:block;width:4px;height:4px;border-radius:50%;background:#903a2d;margin:3px auto}
+.sword-art:hover .sword-hotspot,.sword-art:focus-within .sword-hotspot,.sword-section[data-interacting=true] .sword-hotspot{opacity:1}
+.sword-section .controls-sword::before{display:none}
+.sword-section .sword-info{background:none!important;width:290px}
+.sword-info>summary{cursor:pointer;list-style:none;font-size:18px;min-height:44px;padding:12px 0;color:#723e31;border-bottom:1px solid #a8a08c}
+.sword-info>summary::-webkit-details-marker{display:none}.sword-info>summary::after{content:' ＋';float:right}.sword-info[open]>summary::after{content:' −'}
+.sword-info .sword-tabs,.sword-info .ink-transition{background:none}.sword-info[open]{background:radial-gradient(ellipse,#f4f1e9 45%,#f4f1e9bb 68%,transparent 85%)!important;padding:20px}
+.ink-practice-open,.motion-control{background:transparent!important;border:0!important;box-shadow:none!important;text-shadow:0 1px 4px #f4f1e9;min-height:44px}
+.journal-title-art{width:clamp(240px,29vw,430px);height:auto;display:block}
+.journal-section .featured-copy{background:radial-gradient(ellipse,#f4f1e9dd 35%,#f4f1e966 67%,transparent 80%);padding:28px!important}
+.chapter-switch{display:flex;gap:20px;margin-bottom:24px}.chapter-switch button{min-height:44px;min-width:44px;border:0;border-bottom:1px solid #9e998a;background:none;color:#58604f;font:inherit}.chapter-switch button[aria-pressed=true]{color:#9b392b;border-bottom:2px solid}
+.journal-section .story-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;max-width:1200px;margin:30px auto 80px}
+.journal-section .story-row{display:flex;flex-direction:column;align-items:flex-start;gap:14px;padding:18px 0;position:relative;border-top:0;border-bottom:1px solid #b8b2a2;min-width:0}
+.journal-section .story-thumb{display:block;width:100%;height:170px;object-fit:cover;mix-blend-mode:multiply;mask-image:linear-gradient(0deg,transparent,#000 18%,#000 90%,transparent);transition:transform .6s}
+.story-row:hover .story-thumb,.story-row:focus-visible .story-thumb{transform:translateY(-5px)}
+.journal-section .story-row-title{font-size:20px}.journal-section .story-number{color:#974d3c}.story-reading-time{display:block!important;font-size:12px;color:#606450}
+.journal-section .story-row:nth-child(2){margin-top:0}
+@media(max-width:760px){.sword-section .controls-sword{width:88%;max-width:none;bottom:auto}.sword-section .sword-info{width:88%;margin:20px 6% 60px}.sword-section .sword-hotspot{opacity:1}.journal-section .story-list{grid-template-columns:1fr;gap:20px}.journal-section .story-thumb{height:190px}.journal-section .featured-copy{padding:20px!important}.chapter-switch{gap:12px}.inspect-invite{font-size:22px!important}}
+@media(prefers-reduced-motion:reduce){.sword-hotspot,.story-thumb{transition:none!important}}

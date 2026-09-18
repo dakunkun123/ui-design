@@ -1,0 +1,26 @@
+/* Keep the world still in screen space; only individual foreground objects parallax. */
+.story-atlas .portal-space{transform:none;transition:none;mask-image:radial-gradient(ellipse at 50% 48%,#000 38%,#000c 63%,transparent 78%)}
+.story-atlas .portal-mountains{inset:-8%;width:116%;height:116%;mask-image:radial-gradient(ellipse,#000 42%,transparent 75%)}
+.story-atlas .portal-setting,.voyage-setting{mask-image:radial-gradient(ellipse,#000 34%,#000b 55%,transparent 73%)}
+/* Apply the mask to the actual painted image, not a letterboxed object-fit container. */
+.voyage-0 .voyage-actor{mask-image:none;display:flex;justify-content:center;align-items:flex-end}
+.voyage-0 .voyage-actor img{width:auto;height:100%;max-width:none;object-fit:fill;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 96%,transparent),linear-gradient(#000 66%,transparent 98%);mask-composite:intersect}
+.story-atlas .portal-0 .portal-subject{width:auto;height:111%;max-width:none;object-fit:fill;mask-image:linear-gradient(90deg,transparent,#000 13%,#000 96%,transparent),linear-gradient(#000 64%,transparent 96%);mask-composite:intersect}
+.voyage-land{inset:-8%;width:116%;height:116%;mask-image:radial-gradient(ellipse,#000 45%,transparent 76%)}
+.portal-veil,.voyage-curtain{display:none}
+.leaf-curtain{position:fixed;inset:0;width:100vw;height:100dvh;max-width:none;max-height:none;margin:0;padding:0;border:0;background:transparent;overflow:hidden;outline:none}
+.leaf-curtain::backdrop{background:transparent;backdrop-filter:none}
+.leaf-curtain canvas{display:block;width:100%;height:100%}
+.leaf-curtain button{position:absolute;right:28px;bottom:28px;color:#f6e8cf;background:#432a24aa;border:1px solid #f6e8cf66;padding:12px 18px;font:14px serif;letter-spacing:3px}
+.ink-growth{position:absolute;inset:0;width:100%;height:100%;z-index:3;pointer-events:none}
+.voyage-stage{touch-action:none;user-select:none}
+.voyage-gesture small{letter-spacing:2px}
+.voyage-1 .voyage-gesture{left:49%;bottom:13%}
+.voyage-kicker,.voyage-actions,.voyage-gesture{color:#344335}
+.voyage-actor img{user-select:none}
+@media(pointer:fine){
+ body,.story-portal,.voyage-stage{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M3 2L12 25L15 16L25 13Z' fill='%23243128' stroke='%23f3f0e7' stroke-width='1.4'/%3E%3Cpath d='M7 7L13 17' stroke='%23c8c4ac' stroke-width='.7'/%3E%3Ccircle cx='25' cy='24' r='2.4' fill='%239d3c2d'/%3E%3C/svg%3E") 3 2,auto}
+ html body button:not(:disabled),html body a,html body [role=button]{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Cpath d='M3 2L12 25L15 16L25 13Z' fill='%239c392b' stroke='%23f3f0e7' stroke-width='1.4'/%3E%3Cpath d='M24 21Q29 26 23 29' fill='none' stroke='%23243128'/%3E%3C/svg%3E") 3 2,pointer}
+ input,textarea{cursor:text}
+}
+@media(max-width:760px){.story-atlas .portal-0 .portal-subject{left:25%;height:88%}.voyage-0 .voyage-actor{left:27%;width:91%;height:76%}.leaf-curtain button{right:16px;bottom:16px}.voyage-1 .voyage-gesture{left:48%;bottom:13%;width:48%}.voyage-gesture small{letter-spacing:0;line-height:1.8}.voyage-beat{font-size:16px!important}.voyage-actions button{min-height:44px}}

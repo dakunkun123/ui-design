@@ -1,0 +1,14 @@
+main>section[data-active="false"]{position:fixed!important;left:-200vw!important;top:0!important;width:100vw!important;visibility:hidden!important;pointer-events:none!important}
+main>.epilogue{display:none}
+main>.sword-section[data-active="true"],main>.journal-section[data-active="true"]{padding-top:110px;min-height:calc(100svh - 85px)}
+.route-curtain{position:fixed;inset:85px 0 0;z-index:26;pointer-events:none;display:none}
+.route-curtain canvas{display:block;width:100%;height:100%}
+.route-curtain[data-active="true"]{display:block}
+html[data-routing="true"] main{pointer-events:none}
+.navigation a[aria-current="page"]{color:#a6332e}
+.navigation a[aria-current="page"]::after{transform:scaleX(1)}
+.sword-art .gpu-scene,.journal-scene-wrap .gpu-scene{mask-image:linear-gradient(90deg,transparent,#000 5%,#000 96%,transparent),linear-gradient(0deg,transparent,#000 6%,#000 94%,transparent);mask-composite:intersect}
+.sword-section>.section-heading{flex-wrap:wrap}
+.sword-section>.section-heading>div{flex:1 0 230px}
+.sword-section>.section-heading>button{margin-left:auto}
+@media(max-width:760px){main>.sword-section[data-active="true"],main>.journal-section[data-active="true"]{padding-top:95px}}

@@ -1,0 +1,21 @@
+/* Material-specific movement. Avoid breathing/zooming whole illustrations. */
+.living-backdrop{display:block;background-size:cover;background-position:center;pointer-events:none}
+.living-backdrop canvas{display:block;width:100%;height:100%}
+.portal-space .living-plant,.voyage-camera .living-plant{position:absolute;pointer-events:none;animation:none}
+.portal-space .living-backdrop{position:absolute}
+.voyage-camera .living-backdrop{position:absolute}
+.voyage-1 .voyage-setting,.portal-1 .portal-setting{transform-origin:50% 96%;animation:reed-wind 7.7s ease-in-out infinite}
+.voyage-2 .voyage-setting,.portal-2 .portal-setting{transform-origin:70% 98%;animation:bamboo-wind 9.3s ease-in-out infinite}
+.voyage-1 .voyage-actor img,.portal-1 .portal-subject{animation:boat-buoyancy 6.8s ease-in-out infinite;transform-origin:50% 88%}
+.voyage-2 .voyage-detail{transform-origin:12% 4%;animation:ribbon-breath 5.3s ease-in-out infinite}
+.portal-0 .portal-subject,.voyage-0 .voyage-actor img{filter:grayscale(.25) contrast(1.03)}
+@keyframes reed-wind{0%,100%{rotate:-.65deg;translate:0 0}40%{rotate:1.2deg;translate:2px 0}70%{rotate:.2deg;translate:0 0}}
+@keyframes bamboo-wind{0%,100%{rotate:.2deg}35%{rotate:-1.25deg}72%{rotate:.6deg}}
+@keyframes boat-buoyancy{0%,100%{translate:0 0;rotate:-.3deg}50%{translate:2px -5px;rotate:.25deg}}
+@keyframes ribbon-breath{0%,100%{rotate:-1deg;scale:1 1}50%{rotate:2deg;scale:1.015 .995}}
+.voyage-content,.portal-caption{isolation:isolate}
+.atlas-scene{animation:atlas-arrival .8s ease-out both}
+@keyframes atlas-arrival{from{opacity:.15}to{opacity:1}}
+.leaf-curtain button{background:#f3ecddd9;color:#513c2c;border-color:#6b4b3744;backdrop-filter:blur(8px)}
+html[data-motion=off] .voyage *,html[data-motion=off] .story-atlas *{animation-play-state:paused!important}
+@media(prefers-reduced-motion:reduce){.voyage *,.story-atlas *{animation:none!important}}

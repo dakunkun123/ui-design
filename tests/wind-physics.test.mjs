@@ -1,0 +1,5 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {windAt,branchBend,createLeaf,stepLeaf,makeChain,stepChain} from '../src/windPhysics.mjs';
+test('root stays fixed and free end bends',()=>{for(let t=0;t<20;t+=.1){assert.equal(branchBend(1,t),0);assert.ok(Number.isFinite(windAt(t)));}assert.notEqual(branchBend(.1,0),branchBend(.1,2));});
+test('tassel anchor fixed, chain finite and bounded',()=>{const p=makeChain();for(let i=0;i<3600;i++)stepChain(p,1/120,windAt(i/120));assert.equal(p[0].x,150);assert.equal(p[0].y,15);for(let i=1;i<p.length;i++){assert.ok(Number.isFinite(p[i].x));assert.ok(Math.abs(Math.hypot(p[i].x-p[i-1].x,p[i].y-p[i-1].y)-260/24)<1);}assert.ok(Math.abs(p.at(-1).x-150)>10);});
+test('leaf changes once to floating only within water bounds',()=>{const s=createLeaf(100,0,1,0);let events=0;for(let i=0;i<2000;i++)events+=Number(stepLeaf(s,1/120,0,{left:0,right:300,y:80}));assert.equal(events,1);assert.equal(s.phase,'water');assert.equal(s.y,80);const miss=createLeaf(-500,0,0,0);for(let i=0;i<400;i++)stepLeaf(miss,1/120,0,{left:0,right:300,y:80});assert.equal(miss.phase,'air');});

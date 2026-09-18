@@ -1,0 +1,33 @@
+.scene-controls{color:var(--ink,#202321);font-size:14px;letter-spacing:.08em}
+.controls-hero{position:absolute;z-index:9;left:6.4%;bottom:30px;max-width:82%;padding:10px 16px;background:linear-gradient(90deg,#f4f1e9ed,#f4f1e9a8,transparent)}
+.wind-controls,.wind-options,.inspect-options,.inspect-angle{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.scene-controls button{border:0;background:none;color:inherit;min-height:36px;padding:6px 8px;cursor:pointer;position:relative}
+.scene-controls button:disabled{cursor:not-allowed;opacity:.46}
+.scene-controls button[aria-pressed=true]{color:#a6332e}
+.scene-controls button[aria-pressed=true]::after{content:'';position:absolute;left:15%;right:15%;bottom:2px;height:2px;background:currentColor;clip-path:polygon(0 35%,97% 0,100% 70%,12% 100%)}
+.control-seal{color:#a6332e;border:1px solid currentColor;padding:6px 4px;writing-mode:vertical-rl;font-size:13px;transform:rotate(-3deg)}
+.scene-action{border-bottom:1px solid #8c897c!important}
+.scene-hint{color:#626257;font-size:12px;letter-spacing:.06em;margin:8px 0 0;line-height:1.8;max-width:440px}
+.controls-sword{width:59%;padding:14px 6px 24px;border-top:1px solid #ccc6b6;align-self:start}
+.inspect-options{gap:20px}.inspect-caption{min-height:24px;margin:12px 0;color:#5a5b54;line-height:1.8}
+.sword-section .sword-art{touch-action:pan-y pinch-zoom;cursor:grab;user-select:none}.sword-section .sword-art:active{cursor:grabbing}.sword-art:focus-visible{outline:2px solid #a6332e;outline-offset:4px}
+.inspect-angle{gap:12px;flex-wrap:nowrap;max-width:360px}.inspect-angle input{accent-color:#7c352e;min-width:0;flex:1;height:32px;cursor:ew-resize}.inspect-angle output{width:34px;font-variant-numeric:tabular-nums}
+.journal-tools{display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding:28px 0 20px;border-bottom:1px solid #ccc6b6;margin-top:25px}
+.journal-tools label{display:flex;align-items:center;gap:14px;flex:1;min-width:210px}
+.journal-tools input{border:0;border-bottom:1px solid #918c80;background:transparent;color:#202321;padding:10px 4px;min-width:0;width:min(100%,360px);font:inherit;font-size:16px}
+.journal-tools button{background:transparent;border:1px solid #999384;min-height:42px;padding:6px 14px;color:inherit;cursor:pointer;font:inherit;font-size:14px}
+.journal-tools button[aria-pressed=true]{color:#a6332e;border-color:currentColor}
+.journal-count{font-size:13px;color:#626257;flex-basis:100%;margin:0}.journal-empty{padding:40px 0;line-height:1.8}
+.reader-progress{height:2px;background:#a6332e;transform-origin:left;position:sticky;top:0;z-index:2}
+.reader-progress-label{font-size:12px;color:#626257;white-space:nowrap}
+.reader-end button[aria-pressed=true]{color:#a6332e;border:1px solid currentColor;padding:7px 12px}
+.save-status{font-size:12px;color:#626257;margin:8px 0;text-align:center}
+section .hero-copy,section .section-heading,section .sword-info,section .featured-copy,section .story-list,section .scene-controls,section .journal-tools{opacity:var(--route-copy,1)}
+section .river-caption{opacity:var(--route-copy,1)}
+.scene-controls button:focus-visible,.journal-tools button:focus-visible{outline:2px solid #a6332e;outline-offset:4px}
+.hero .hero-bottom-note{display:none}.hero .scroll-cue{display:none}
+@media(max-width:760px){.controls-hero{left:7%;bottom:22px;max-width:86%;background:#f4f1e9e8;padding:8px 0}.wind-controls{gap:8px}.wind-options{gap:2px}.scene-controls{font-size:12px}.scene-hint{font-size:11px}.controls-sword{width:100%;margin-top:10px}.inspect-options{gap:14px}.journal-tools{gap:12px}.journal-tools label{flex-basis:100%}.journal-tools label span{white-space:nowrap}.hero-bottom-note{display:none!important}}
+@media(prefers-reduced-motion:reduce){.scene-controls *,.journal-tools *{animation:none!important;transition:none!important}}
+@media(max-width:760px){.hero#prologue{height:980px}.controls-hero{bottom:30px;background:none;padding:0;max-width:86%}.wind-controls{gap:10px}.wind-options{gap:4px}.scene-controls button{min-height:40px}.scene-hint{max-width:240px}.hero .controls-hero{left:7%}}
+@media(max-width:370px){.hero#prologue{height:960px}}
+@media(max-width:760px){.route-curtain{top:76px}.hero#prologue>.gpu-scene{mask-image:linear-gradient(to bottom,#000 86%,transparent 100%)}}

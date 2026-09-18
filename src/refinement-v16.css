@@ -1,0 +1,41 @@
+/* Local brush assets, native link semantics; no image-sized clickable overlays. */
+.art-label{display:inline-flex;align-items:center;justify-content:center;vertical-align:middle;flex:none}
+.art-label img{display:block;width:auto;height:30px;max-width:none;object-fit:contain}
+.art-prologue img{height:34px}.art-jianlu img{height:31px}.art-journal img{height:31px}
+.masthead .navigation{gap:35px}
+.masthead .navigation>a{min-height:50px}
+.masthead .navigation>a::before{inset:-10px -22px;background:radial-gradient(ellipse,#f4f1e9e0 15%,#f4f1e980 46%,transparent 73%)}
+.masthead .navigation>a[aria-current="page"] img,.masthead .navigation>a:hover img{filter:sepia(.8) saturate(3) hue-rotate(325deg)}
+.masthead .navigation .nav-action{border:0;background:url('/assets/ink-frame-v16.webp') center/100% 100% no-repeat;min-width:142px;padding:12px 24px;transition:transform .25s}
+.masthead .navigation .nav-action:hover{background-color:transparent;transform:translateY(-2px)}
+.masthead .nav-action .art-label img{height:28px}
+.hero .hero-actions{gap:30px}
+.hero .ink-button{position:relative;isolation:isolate;width:245px;min-height:78px;background:url('/assets/ink-frame-v16.webp') center/100% 100% no-repeat;color:#252b25;gap:24px;padding:17px 25px;filter:none}
+.hero .ink-button::before{content:'';position:absolute;z-index:-1;inset:10px;pointer-events:none;opacity:.2;background:radial-gradient(ellipse,#aab09c55,transparent 72%);transition:opacity .3s}
+.hero .ink-button:hover::before{opacity:1}
+.hero .ink-button .art-label img{height:35px}
+.hero .hero-actions .text-link{position:relative;border:0;background:none;padding:14px 0}
+.hero .hero-actions .text-link::after{content:'';position:absolute;bottom:4px;left:0;right:0;height:2px;background:#61685c;clip-path:polygon(0 40%,25% 0,100% 40%,96% 100%,8% 80%);transition:transform .25s;transform-origin:left}
+.hero .hero-actions .text-link:hover::after{transform:scaleX(.75)}
+.hero .hero-actions .text-link img{height:30px}
+.hero .hero-subtitle{font-family:InkBrush,'STKaiti',KaiTi,serif;font-size:clamp(23px,1.9vw,31px);letter-spacing:2px;color:#313930}
+.hero .art-motto{width:min(100%,450px)}.hero .art-motto img{width:100%;height:auto;max-width:100%}
+.river-caption{position:absolute;left:6%;bottom:15%;z-index:5;display:flex;gap:15px;align-items:center;pointer-events:none;opacity:var(--route-copy,1)}
+.river-caption>span{font:24px/1.3 InkBrush,'STKaiti',KaiTi,serif;writing-mode:vertical-rl;color:#933e31;border:1px solid #933e3155;padding:6px 1px;transform:rotate(-3deg)}
+.river-caption p{font:15px/1.8 'STKaiti',KaiTi,serif;letter-spacing:4px;color:#4f5d50;text-shadow:0 0 7px #f4f1e9}
+.hero .controls-hero{bottom:28px;isolation:isolate}
+.hero .controls-hero::before{content:'';position:absolute;inset:-22px -24px;z-index:-1;pointer-events:none;background:radial-gradient(ellipse,#f4f1e9f5 20%,#f4f1e9ca 55%,transparent 75%)}
+.hero .scene-action{padding:8px 16px;border:0!important;background:url('/assets/ink-frame-v16.webp') center/100% 100% no-repeat;font-family:InkBrush,'STKaiti',KaiTi,serif;font-size:19px}
+.hero .scene-hint{color:#4a5549}
+.gpu-scene .canopy-depth{top:80px}
+@media(max-width:1100px) and (min-width:761px){.masthead .navigation{gap:24px}.hero .ink-button{width:210px}.hero .ink-button .art-label img{height:29px}.hero .hero-actions{gap:22px}.hero .hero-actions .text-link img{height:25px}}
+@media(max-width:760px){
+ .masthead .navigation{gap:4px}.masthead .navigation>a{justify-content:flex-start}.masthead .navigation .nav-action{align-self:flex-start;justify-content:center;min-width:160px;margin-top:14px}
+ .hero .hero-actions{gap:22px;margin-top:18px}.hero .ink-button{width:190px;min-height:66px;gap:16px;padding:15px 22px}.hero .ink-button .art-label img{height:28px}.hero .hero-actions .text-link img{height:26px}
+ .hero .hero-subtitle{font-size:23px;letter-spacing:1px}.river-caption{bottom:23%;left:7%}.river-caption p{font-size:13px;letter-spacing:3px}.hero .scene-action{font-size:17px}
+ .hero .controls-hero{background:radial-gradient(ellipse,#f4f1e9f5 35%,#f4f1e9b0 65%,transparent 100%)}
+ .gpu-scene .canopy-depth{top:0}
+}
+@media(max-width:370px){.hero .ink-button{width:169px;gap:11px;padding:15px 19px}.hero .ink-button .art-label img{height:25px}.hero .hero-actions .text-link img{height:24px}.hero .hero-actions{gap:16px}.hero .hero-subtitle{font-size:20px}}
+@media(prefers-reduced-motion:reduce){.hero .ink-button,.hero .ink-button::before,.hero .hero-actions .text-link::after,.masthead .navigation .nav-action{transition:none}}
+html[data-motion="off"] .hero .ink-button,html[data-motion="off"] .hero .ink-button::before{transition:none}

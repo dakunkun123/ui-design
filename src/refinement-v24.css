@@ -1,0 +1,87 @@
+/* V24 · one explorable landscape, painted rigs and scene-bound typography. */
+.story-atlas{position:relative;isolation:isolate;min-height:740px;margin:12px -2vw 80px;overflow:hidden}
+.atlas-scene{position:relative;height:690px}
+.story-atlas .story-portal{display:block;width:100%;height:690px;min-height:0;padding:0;border:0!important;outline-offset:-6px;background:transparent;overflow:hidden;perspective:1200px}
+.story-atlas .portal-space{position:absolute;inset:0;width:100%;height:100%;overflow:visible;mask-image:linear-gradient(transparent,#000 8%,#000 80%,transparent)}
+.story-atlas .portal-mountains{inset:0;width:100%;height:100%;opacity:.7;transform:none;mask-image:none}
+.story-atlas .portal-setting{left:50%;bottom:-4%;width:48%;height:92%;opacity:.6;transform:translate3d(calc(var(--look-x,0)*-18px),0,0)}
+.story-atlas .portal-subject{left:42%;bottom:-12%;top:auto;width:55%;height:111%;object-fit:contain;transform:translate3d(calc(var(--look-x,0)*26px),calc(var(--look-y,0)*8px),0);mask-image:linear-gradient(#000 65%,transparent 96%)}
+.story-atlas .portal-caption{position:absolute;left:11%;top:22%;bottom:auto;width:48%;z-index:4;padding:0;text-align:left;background:none;pointer-events:none}
+.story-atlas .portal-art-title{font-size:clamp(64px,7vw,112px);margin:18px 0 25px;letter-spacing:10px;line-height:1.4}
+.story-atlas .portal-caption strong{font-size:18px;letter-spacing:4px;font-weight:400;max-width:24em}
+.story-atlas .portal-enter{margin-top:48px;width:145px;font-size:15px;letter-spacing:4px}
+.story-atlas .portal-word,.story-atlas .portal-leaf,.story-atlas .portal-fog,.story-atlas .portal-halo,.story-atlas .portal-edge-ink{display:none}
+.story-atlas .portal-1 .portal-subject{left:7%;width:46%;height:87%;bottom:-3%}
+.story-atlas .portal-1 .portal-setting{left:3%;width:36%;height:58%;bottom:-3%}
+.story-atlas .portal-1 .portal-caption{left:55%;top:30%;width:42%}
+.story-atlas .portal-2 .portal-subject{left:36%;width:61%;height:98%;bottom:-8%;mask-image:none;transform:rotate(calc(-13deg + var(--look-x,0)*10deg)) translateX(calc(var(--look-x,0)*16px))}
+.story-atlas .portal-2 .portal-setting{left:56%;width:38%;height:85%}
+.atlas-compass{position:relative;display:flex;justify-content:center;gap:clamp(24px,7vw,110px);margin-top:-30px;z-index:5}
+.atlas-compass button{background:transparent;border:0;padding:12px 16px;min-height:80px;color:#636959;cursor:pointer;position:relative;text-align:left}
+.atlas-compass small{font:11px serif;display:inline-block;margin-right:12px;color:#a34a39}
+.atlas-compass span{font:28px InkBrush,KaiTi,serif;letter-spacing:4px}
+.atlas-compass em{display:block;margin:6px 0 0 26px;font:12px serif;letter-spacing:2px}
+.atlas-compass button:after{content:'';position:absolute;bottom:0;left:25%;right:25%;height:2px;background:#a34a39;transform:scaleX(0);transition:transform .5s}
+.atlas-compass button[aria-pressed=true]{color:#9a3b2d}.atlas-compass button[aria-pressed=true]:after{transform:scaleX(1)}
+.atlas-compass button:focus-visible{outline:2px solid #9a3b2d;outline-offset:2px}
+.living-nature{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2}
+.voyage-motion{position:fixed;top:23px;right:9%;z-index:10;min-height:44px;border:0;background:transparent;font-size:12px;letter-spacing:2px;color:#3d493c;cursor:pointer}
+.voyage .voyage-actor{mask-image:linear-gradient(90deg,transparent,#000 22%,#000 90%,transparent),linear-gradient(#000 70%,transparent);mask-composite:intersect}
+.voyage-gesture{text-shadow:0 0 5px #f3f0e7,0 0 15px #f3f0e7}
+.portal-veil,.voyage-curtain{position:absolute;inset:-15%;background:#26342f;mask-image:url('/assets/ink-brush.webp');mask-size:100% 100%;opacity:0;pointer-events:none;z-index:9;transform-origin:left center}
+.voyage-curtain{z-index:6;background:#26342f}
+.voyage-stage{height:100%;min-height:100dvh;bottom:0}
+.voyage-stage:after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse at 22% 48%,#f3f0e7ed 0%,#f3f0e7b8 19%,#f3f0e700 55%),linear-gradient(transparent 72%,#f3f0e7b0)}
+.voyage-1 .voyage-stage:after{background:radial-gradient(ellipse at 65% 50%,#f3f0e7d9,transparent 55%),linear-gradient(transparent 75%,#f3f0e7c0)}
+.voyage-2 .voyage-stage:after{background:radial-gradient(ellipse at 18% 50%,#f3f0e7e8,transparent 55%),linear-gradient(transparent 75%,#f3f0e7c0)}
+.story-atlas .portal-space:after{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 24% 45%,#f3f0e7e0,transparent 60%)}
+.story-atlas .portal-1 .portal-space:after{background:radial-gradient(ellipse at 72% 46%,#f3f0e7df,transparent 55%)}
+.voyage-camera{transform:translate(var(--camera-x),var(--camera-y));transition:transform 2s cubic-bezier(.2,.65,.2,1)}
+.voyage-land{mask-image:none;opacity:.72;object-position:center}
+.voyage-setting{left:-8%;width:42%;height:84%;opacity:.6}
+.voyage-actor{left:44%;width:54%;height:99%;bottom:-8%;mask-image:linear-gradient(#000 60%,transparent 96%)}
+.voyage-title-art{left:auto;right:4%;top:14%;color:#45524418;font-size:120px;filter:none;letter-spacing:14px;z-index:1}
+.voyage-content{position:static;margin:0;width:auto;padding:0;pointer-events:none}
+.voyage-kicker{position:absolute;left:11%;top:19%;margin:0;font-size:12px;z-index:3;letter-spacing:4px}
+.scene-verse{position:absolute;left:11%;top:25%;max-width:82%;margin:0;font:clamp(36px,4.4vw,70px)/1.5 InkBrush,KaiTi,serif;letter-spacing:5px;z-index:3;pointer-events:none;text-shadow:0 2px 20px #f3f0e7}
+.scene-verse span{display:inline-block;background:linear-gradient(115deg,#15221c 10%,#3e4938 44%,#15221c 65%);background-size:230% 100%;background-clip:text;-webkit-background-clip:text;color:transparent;animation:verse-ink 9s ease-in-out infinite}
+@keyframes verse-ink{0%,100%{background-position:0 0}50%{background-position:100% 0}}
+.voyage-beat{position:absolute;left:12%;bottom:29%;width:27%;font-size:16px;line-height:2.3;min-height:0;z-index:3;text-wrap:pretty;text-shadow:0 1px 12px #f3f0e7}
+.voyage-actions{position:absolute;left:12%;bottom:20%;margin:0;z-index:4}
+.voyage-gesture{left:12%;right:auto;bottom:12%;background:none;text-shadow:0 1px 10px #f3f0e7;z-index:4}
+.voyage-path{left:12%;right:12%;bottom:5%;padding-top:16px;border-top:1px solid #58644b20}
+.voyage-path>div{gap:clamp(12px,5vw,90px)}
+.voyage-1 .voyage-actor{left:0;width:45%;height:72%;bottom:-4%;transform:translate(calc(var(--gaze) + var(--camera-x)*2),0)}
+.voyage-1 .voyage-setting{left:0;width:28%;height:59%}
+.voyage-1 .scene-verse{left:39%;top:31%;max-width:55%;font-size:clamp(36px,4.2vw,65px)}
+.voyage-1 .voyage-kicker{left:40%;top:24%}.voyage-1 .voyage-beat{left:49%;bottom:33%;width:31%}.voyage-1 .voyage-actions{left:49%;bottom:23%}
+.voyage-1 .voyage-gesture{left:13%;right:auto;bottom:20%}
+.voyage-2 .voyage-actor{left:28%;width:63%;height:85%;bottom:3%;transform:translateX(var(--gaze)) rotate(var(--blade-angle))}
+.voyage-2 .voyage-setting{left:auto;right:-9%;height:90%;width:47%}
+.voyage-2 .voyage-detail{left:42%;top:21%;width:28%;height:50%}
+.voyage-2 .scene-verse{writing-mode:vertical-rl;white-space:nowrap;left:10%;top:25%;height:auto;font-size:clamp(30px,2.7vw,41px);letter-spacing:3px}
+.voyage-2 .voyage-kicker{left:10%;top:18%}.voyage-2 .voyage-beat{left:23%;bottom:37%;width:19%;font-size:15px}
+.voyage-2 .voyage-actions{left:23%;bottom:26%}
+.voyage[data-full=true]{min-height:100dvh;overflow:auto}
+.voyage[data-full=true] .voyage-content{position:relative;margin:100px auto 160px;padding:36px!important;width:min(700px,90%);background:#f3f0e7f5;pointer-events:auto;z-index:5}
+.voyage[data-full=true] .voyage-kicker,.voyage[data-full=true] .scene-verse,.voyage[data-full=true] .voyage-beat,.voyage[data-full=true] .voyage-actions{position:static;width:auto;max-width:none;height:auto;writing-mode:horizontal-tb}
+.voyage[data-full=true] .scene-verse{font-size:34px;margin:25px 0}.voyage[data-full=true] .voyage-beat{font-size:17px}.voyage[data-full=true] .voyage-actions{margin-top:20px}
+.voyage[data-full=true] .voyage-path{position:fixed;background:#f3f0e7e8;bottom:0;left:0;right:0;padding:12px 8%}.voyage[data-full=true] .voyage-gesture{display:none}
+@media(max-width:760px){
+ .voyage-motion{top:11px;right:18%;font-size:11px}
+ .story-atlas{min-height:630px;margin:0 -5vw 30px}.atlas-scene,.story-atlas .story-portal{height:560px}
+ .story-atlas .portal-subject{left:23%;width:90%;height:90%;bottom:0;opacity:.8}.story-atlas .portal-setting{left:35%;width:70%}
+ .story-atlas .portal-caption{left:8%;top:16%;width:85%}.story-atlas .portal-art-title{font-size:58px;letter-spacing:4px;margin:14px 0}.story-atlas .portal-caption strong{font-size:14px;max-width:12em}.story-atlas .portal-enter{margin-top:27px}
+ .story-atlas .portal-1 .portal-caption{left:43%;top:20%;width:55%}.story-atlas .portal-1 .portal-art-title{font-size:44px}.story-atlas .portal-1 .portal-subject{left:-15%;width:85%;height:78%}
+ .story-atlas .portal-2 .portal-subject{left:22%;width:83%;height:80%;bottom:0}.story-atlas .portal-2 .portal-setting{left:37%;width:70%}
+ .atlas-compass{gap:0;justify-content:space-around;margin-top:-10px}.atlas-compass button{padding:10px 5px}.atlas-compass span{font-size:23px;letter-spacing:1px}.atlas-compass small{margin-right:5px}.atlas-compass em{margin-left:0;font-size:10px;letter-spacing:1px}
+ .voyage-stage{height:100%;min-height:100dvh}.voyage-land{mask-image:none}.voyage-actor{left:22%;width:100%;height:78%;bottom:0;opacity:.8}.voyage-setting{left:-22%;width:80%;height:72%}
+ .voyage-title-art{font-size:62px;top:13%;right:3%}.voyage-kicker{left:7%;top:14%;font-size:10px}.scene-verse{left:7%;top:21%;font-size:36px;max-width:88%;letter-spacing:2px}
+ .voyage-beat{left:8%;width:48%;bottom:31%;font-size:14px}.voyage-actions{left:8%;bottom:22%;gap:18px}.voyage-gesture{top:auto;left:8%;right:auto;bottom:13%;padding:0;background:none}.voyage-gesture span{font-size:20px}.voyage-gesture small{font-size:10px}
+ .voyage-path{left:3%;right:3%;bottom:1%;padding-top:7px}.voyage-path>div{gap:0}.voyage-path button span{font-size:15px}
+ .voyage-1 .voyage-actor{left:-15%;width:88%;height:66%;bottom:2%}.voyage-1 .voyage-setting{left:-12%;width:66%;height:50%}
+ .voyage-1 .voyage-kicker{left:8%;top:14%}.voyage-1 .scene-verse{left:8%;top:22%;max-width:85%;font-size:37px}.voyage-1 .voyage-beat{left:48%;width:43%;bottom:35%}.voyage-1 .voyage-actions{left:48%;bottom:24%;gap:12px}.voyage-1 .voyage-gesture{left:8%;bottom:13%}
+ .voyage-2 .voyage-actor{left:24%;width:91%;height:76%;bottom:4%}.voyage-2 .voyage-setting{right:-30%;width:85%;left:auto}.voyage-2 .scene-verse{left:8%;top:23%;height:auto;font-size:29px}.voyage-2 .voyage-kicker{left:8%;top:14%}.voyage-2 .voyage-beat{left:23%;bottom:37%;width:26%;font-size:13px}.voyage-2 .voyage-actions{left:23%;bottom:24%}.voyage-2 .voyage-detail{left:37%;width:50%}
+}
+@media(prefers-reduced-motion:reduce){.story-atlas *,.scene-verse span{animation:none!important;transition:none!important}}
+html[data-motion=off] .story-atlas *,html[data-motion=off] .scene-verse span{animation:none!important;transition:none!important}

@@ -1,0 +1,13 @@
+/* The canopy remains continuous behind the navigation. Only the glyphs have a wash. */
+.masthead{background:transparent;backdrop-filter:none;box-shadow:none}
+.route-curtain{inset:0}
+.masthead .brand,.masthead .brand-motto,.masthead .navigation>a,.masthead .menu-toggle{text-shadow:0 0 5px #f4f1e9,0 0 12px #f4f1e9,1px 1px 2px #f4f1e9}
+.masthead .nav-action{background:#f4f1e938}
+.masthead .navigation>a{isolation:isolate}
+.masthead .navigation>a::before{content:'';position:absolute;inset:-8px -20px;z-index:-1;pointer-events:none;background:radial-gradient(ellipse,#f4f1e9c9 10%,#f4f1e980 40%,transparent 72%)}
+.masthead .navigation>a[aria-current="page"]::after{transform:scaleX(1)}
+.masthead .nav-action:hover{text-shadow:none;background:var(--ink)}
+.sword-info .ink-transition,.sword-info .sword-tabs,.controls-sword,.featured-copy{background:radial-gradient(ellipse at center,#f4f1e9ed 30%,#f4f1e9a6 65%,#f4f1e900 100%)}
+.silk-action{margin-left:8px;color:var(--red);border:0;border-bottom:1px solid #9d493b60;background:transparent;font:inherit;cursor:pointer;padding:4px 9px;min-height:44px}
+.silk-action:disabled{opacity:.4;cursor:default}
+@media(max-width:760px){.masthead{background:transparent}.route-curtain{top:0}.navigation.is-open{background:#f4f1e9f7}.featured-copy{background:transparent}}
